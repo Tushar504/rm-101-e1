@@ -5,10 +5,10 @@ import Counter from "../Counter/Counter";
 const Task = ({task,tasks,update}) => {
   // NOTE: do not delete `data-testid` key value pair
   const changetasks=()=>{
-    let ans= [...tasks]
-       for(var i=0;i<ans.length;i++){
-         if(ans[i].id===task.id){
-           
+ 
+       for(var i=0;i<tasks.length;i++){
+         if(tasks[i].id===task.id){
+          let ans= [...tasks]
              ans.splice(i,1)
            
            return  update(ans)
